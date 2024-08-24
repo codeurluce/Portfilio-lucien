@@ -1,0 +1,215 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap');
+
+/* css variables */
+:root{
+    --header-height: 3.5rem;
+
+    --primary-color:#4a4a4a;
+    --primary-color-alt:#575757;
+    --linear-gradient: linear-gradient(
+        54deg, 
+        rgba(45, 45, 45, 0.95) 34%,
+        rgba(45, 45, 45, 0.95) );
+    --title-color:#4a4a4a;
+    --text-color:#555;
+    --text-color-alt:#999;
+    --bg-color:#fff;
+    --bg-color-alt: #e9ecef;
+    --border-color: #f1f1f1;
+
+    --roboto-font: 'Roboto', sans-serif;
+    --mono-font: 'Roboto Mono', monospace;
+
+    --fs-h1: 2.75rem;
+    --fs-h2: 2.75rem;
+    --fs-lg: 1.125rem;
+    --fs-base: 1rem;
+    --fs-sm: 0.875rem;
+    --fs-xs: 0.75rem;
+
+    --medium: 500;
+    --semibold: 600;
+    --bold: 700;
+}
+
+/* ===== BASE ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;  /*La propriété définit le comportement du défilement */
+}
+body, button, input, textarea {
+    font-family: var(--roboto-font);
+    font-size: var(--fs-base);
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5em;
+}
+h1, h2, h3{
+    font-family: var(--mono-font);
+    font-weight: var(--bold);
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+button{
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+textarea, input{
+    background: none;
+    border: none;
+    outline: none;
+}
+/* ===== Menu nav header ===== */
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.nav{
+    height: calc(var(--header-height) + 0.9rem);
+    display: flex;
+    align-items: flex-end;
+}
+.nav_list{
+    display: flex;
+    column-gap: 3.5rem;
+}
+.nav_link{
+    color: #fff;
+    font-size: 0.7rem;
+    font-family: var(--mono-font);
+    font-weight: var(--bold);
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.3s;
+}
+.nav_link:hover{
+    opacity: 0.5;
+}
+.nav_link::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -0.5rem;
+    width: 7px;
+    height: 2px;
+    background-color: #fff;
+    opacity: 0;
+    transition: 0.3s;
+}
+.nav_link:hover::after{
+    opacity: 1;
+}
+.nav_close, 
+.nav_toggle{
+    display: none;
+}
+/* ===== Active Link ===== */
+.active-link{
+    opacity: 0.5;
+}
+.active-link::after{
+    opacity: 1;
+}
+
+/* ===== Home ===== */
+.container{
+    max-width: 1140px;
+    margin: auto;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+}
+.grid{
+    display: grid;
+}
+/* ===== Home bannière ===== */
+.home{
+    background: url(../img/profil.png);
+    background-size: contain;
+    padding-top: 5.5rem;
+    position: relative;
+}
+.home::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--linear-gradient);
+}
+.home_container{
+    grid-template-columns: 4fr 8fr;
+    column-gap: 1.875rem;
+} 
+.home_img, .home_data{
+    z-index: 10;
+}
+.home_img{
+    width: 90%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transform: translateY(3.5rem);
+    box-shadow: 0 0 20px rgb(96 96 96 )
+}
+.home_name,
+.home_work,
+.home_list,
+.home_social-link{
+    color: #fff;
+    font-family: var(--mono-font);
+}
+.home_name{
+    font-size: var(--fs-h1);
+    line-height: 1.15em;
+    margin: 1em 0 0.15em;
+}
+.home_work{
+    margin-bottom: 2.5em;
+}
+.home_list dt{
+    float: left;
+    font-weight: bold;
+    opacity: 0.4;
+}
+.home_list dd{
+    padding-left: 6.3em;
+}
+.home_list dd:not(:last-child){ /*permet de cibler un élément qui est le dernier enfant de son parent. */
+    margin-bottom: 0.95em;
+}
+.home_socials{
+    margin: 2rem 0 2.2rem;
+}
+.home_social-link{
+    font-size: 1.7rem;
+    line-height: 1.36em;
+    margin-right: 2rem;
+    opacity: 0.4;
+}
+.home_social-link:hover{
+    opacity: 1;
+}
