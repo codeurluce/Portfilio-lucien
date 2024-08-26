@@ -102,7 +102,6 @@ textarea, input{
     font-family: var(--mono-font);
     font-weight: var(--bold);
     text-transform: uppercase;
-    position: relative;
     transition: 0.3s;
 }
 .nav_link:hover{
@@ -147,7 +146,6 @@ textarea, input{
 .section{
     padding-top: 1rem;
     padding-bottom: 3.75rem;
-    background-color: aqua;
 }
 .section_title{
     font-size: var(--fs-h2);
@@ -158,6 +156,9 @@ textarea, input{
 .text-lg{
     font-size: var(--fs-lg);
     line-height: 1.6rem;
+}
+.hello_details{
+    text-align: justify;
 }
 /* ===== Home bannière ===== */
 .home{
@@ -228,4 +229,101 @@ textarea, input{
 }
 .home_social-link:hover{
     opacity: 1;
+}
+
+/* ===== Services ===== */
+.services_container{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.575rem;
+}
+.services_item{
+    border: 1px solid var(--border-color);
+    padding: 2.5rem 1.25rem 1.875rem;
+    text-align: center;
+}
+.icon_box{
+    border: 1px solid var(--border-color);
+    width: 80px;
+    height: 60px;
+    border-radius: 10%;
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+    position: relative;
+    display: flex;
+}
+.services_icon{
+    width: 50px;
+    margin: auto;
+}
+.services_dot{
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 150%;
+    height: 100%;
+    animation: service-dot 2s linear infinite;
+    animation-play-state: paused;
+}
+.services_item:hover .services_dot{
+     animation-play-state: running;
+}
+@keyframes service-dot {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(1turn);
+    }
+}
+.dot{
+    width: 13px;
+    height: 13px;
+    background-color: var(--title-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0.9rem;
+}
+.services_title{
+    margin-bottom: 0.8em;
+}
+
+/* ===== Parcours & experiences ===== */
+.resume_container{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+}
+.resume_title{
+    color: var(--text-color-alt);
+    letter-spacing: 0.4em;
+    margin-bottom: 2.8em;
+}
+.resume_item{
+    border-left: 2px solid var(--primary-color);
+    padding-left: 1.6rem;
+    position: relative;
+}
+.resume_item:not(:last-child) {
+    padding-bottom: 3rem;
+}
+.resume_item::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    position: absolute;
+    left: -0.56rem;
+    background-color: var(--bg-color);
+}
+.resume_subtitle{
+    color: var(--primary-color);
+    margin-bottom: 0.36rem;
+}
+.resume_date {
+    color: var(--text-color-alt);
+    margin-bottom: 0.7em;
+}
+.resume_description {
+    text-align: justify;
 }
