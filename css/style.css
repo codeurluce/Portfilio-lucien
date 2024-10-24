@@ -4,7 +4,9 @@
 /* css variables */
 :root{
     --header-height: 3.5rem;
-
+    /* --primary-orange: #FFA44D; */
+    --primary-orange:#FF8C00;
+    --primary-blue: #03678e;
     --primary-color:#4a4a4a;
     --primary-color-alt:#575757;
     --linear-gradient: linear-gradient(
@@ -55,6 +57,9 @@ body{
 h1, h2, h3{
     font-family: var(--mono-font);
     font-weight: var(--bold);
+}
+h2{
+    color: var(--primary-blue)
 }
 ul {
     list-style: none;
@@ -108,7 +113,8 @@ textarea, input{
     transition: 0.3s;
 }
 .nav_link:hover{
-    opacity: 0.5;
+    opacity: 1;
+    color: var(--primary-orange);
 }
 .nav_link::after{
     content: '';
@@ -120,9 +126,6 @@ textarea, input{
     background-color: #fff;
     opacity: 0;
     transition: 0.3s;
-}
-.nav_link:hover::after{
-    opacity: 1;
 }
 .nav_close, 
 .nav_toggle{
@@ -165,7 +168,7 @@ textarea, input{
 }
 /* ===== Home bannière ===== */
 .home{
-    background: url(../img/profil.png);
+    
     background-size: contain;
     padding-top: 5.5rem;
     margin-bottom: 4.5rem;
@@ -178,7 +181,7 @@ textarea, input{
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--linear-gradient);
+    background: var(--primary-blue);
 }
 .home_container{
     grid-template-columns: 4fr 8fr;
