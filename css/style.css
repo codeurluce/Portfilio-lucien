@@ -3,7 +3,6 @@
 
 /* css variables */
 :root{
-    --header-height: 3.5rem;
     /* --primary-orange: #FFA44D; */
     --primary-orange:#FF8C00;
     --primary-blue: #03678e;
@@ -50,16 +49,17 @@ body, button, input, textarea {
     font-size: var(--fs-base);
 }
 body{
+    
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.5em;
+    /* line-height: 1.5em; */
 }
 h1, h2, h3{
     font-family: var(--mono-font);
     font-weight: var(--bold);
 }
 h2{
-    color: var(--primary-blue)
+    color: var(--primary-orange)
 }
 ul {
     list-style: none;
@@ -89,20 +89,25 @@ textarea, input{
 /* ===== Menu nav header ===== */
 
 .header{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
-}
-.nav{
-    height: calc(var(--header-height) + 0.9rem);
+    padding: 0px 100px;
+    background-color: var(--primary-blue);
     display: flex;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
 }
 .nav_list{
     display: flex;
     column-gap: 3.5rem;
+}
+.nav{
+    height: 0.9rem ;
+    display: flex;
+    align-items: flex-end;
 }
 .nav_link{
     color: #fff;
@@ -110,13 +115,12 @@ textarea, input{
     font-family: var(--mono-font);
     font-weight: var(--bold);
     text-transform: uppercase;
-    transition: 0.3s;
+    transition: 0.7s;
 }
 .nav_link:hover{
-    opacity: 1;
     color: var(--primary-orange);
 }
-.nav_link::after{
+/* .nav_link::after{
     content: '';
     position: absolute;
     bottom: 0;
@@ -126,17 +130,29 @@ textarea, input{
     background-color: #fff;
     opacity: 0;
     transition: 0.3s;
-}
+}  */
 .nav_close, 
 .nav_toggle{
-    display: none;
+    display: none; 
+}
+.logo{
+    color: #fff;
+    font-family: var(--mono-font);
+    font-size: var(--fs-h1);
 }
 /* ===== Active Link ===== */
 .active-link{
-    opacity: 0.5;
+    /* opacity: 0.5; */
+    color: var(--primary-orange);
 }
 .active-link::after{
     opacity: 1;
+    
+}
+.navcontainer{
+    max-width: 1140px;
+    padding-left: 0.9rem;
+    padding-right: 0rem;
 }
 
 /* ===== Home ===== */
@@ -144,14 +160,15 @@ textarea, input{
     max-width: 1140px;
     margin: auto;
     padding-left: 0.9rem;
-    padding-right: 0.9rem;
+    padding-right: 0rem;
 }
 .grid{
     display: grid;
 }
 .section{
-    padding-top: 1rem;
-    padding-bottom: 3.75rem;
+    padding-top:    6rem;
+    padding-bottom: 0rem;
+    justify-content: center;
 }
 .section_title{
     font-size: var(--fs-h2);
@@ -180,7 +197,7 @@ textarea, input{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 90%;
     background: var(--primary-blue);
 }
 .home_container{
@@ -196,8 +213,13 @@ textarea, input{
     object-fit: cover;
     border-radius: 0.5rem;
     transform: translateY(3.5rem);
-    box-shadow: 0 0 20px rgb(96 96 96 )
+    box-shadow: 0 0 20px white;
+    transition: filter 2s ease; /* Durée de la transition à 0.5 seconde */
+    filter: grayscale(100%);/* Image en noir et blanc par défaut */
 }
+.home_img:hover{
+    filter: grayscale(0%); /* Restauration des couleurs au survol */
+ }
 .home_name,
 .home_work,
 .home_list,
@@ -207,10 +229,11 @@ textarea, input{
 }
 .home_name{
     font-size: var(--fs-h1);
-    line-height: 1.15em;
-    margin: 1em 0 0.15em;
+    line-height: 1em;
+    margin:0 0 0.15em;
 }
 .home_work{
+    margin-top: 2em;
     margin-bottom: 2.5em;
 }
 .home_list dt{
@@ -231,6 +254,7 @@ textarea, input{
     font-size: 1.7rem;
     line-height: 1.36em;
     margin-right: 2rem;
+    color: var(--primary-orange);
     opacity: 0.4;
 }
 .home_social-link:hover{
@@ -301,7 +325,7 @@ textarea, input{
 }
 .resume_title,
 .skills_title{
-    color: var(--text-color-alt);
+    color: var(--primary-blue);
     letter-spacing: 0.4em;
     margin-bottom: 2.8em;
 }
