@@ -166,7 +166,7 @@ textarea, input{
     display: grid;
 }
 .section{
-    padding-top:    6rem;
+    padding-top: 2rem;
     padding-bottom: 0rem;
     justify-content: center;
 }
@@ -174,11 +174,13 @@ textarea, input{
     font-size: var(--fs-h2);
     line-height: 1;
     font-weight: var(--medium);
+    margin-top: 3rem;
     margin-bottom: 1.2rem;
 }
 .text-lg{
     font-size: var(--fs-lg);
     line-height: 1.6rem;
+    color: black;
 }
 .hello_details{
     text-align: justify;
