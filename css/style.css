@@ -3,6 +3,7 @@
 
 /* css variables */
 :root{
+    /* Couleurs principales */
     /* --primary-orange: #FFA44D; */
     --primary-orange:#FF8C00;
     --primary-blue: #03678e;
@@ -12,16 +13,20 @@
         54deg, 
         rgba(45, 45, 45, 0.95) 34%,
         rgba(45, 45, 45, 0.95) );
+/* Couleurs des titres et du texte */
     --title-color:#4a4a4a;
     --text-color:#555;
     --text-color-alt:#999;
-    --bg-color:#fff;
+    /* Couleurs de fond */
+    --bg-color:#fff; 
     --bg-color-alt: #e9ecef;
+    /* Couleur de bordure */
     --border-color: #f1f1f1;
+/* Polices */
+--roboto-slab: 'Roboto Slab', serif;
+--roboto-mono: 'Roboto Mono', monospace;
 
-    --roboto-font: 'Roboto', sans-serif;
-    --mono-font: 'Roboto Mono', monospace;
-
+/* Tailles de police */
     --fs-h1: 2.75rem;
     --fs-h2: 2.75rem;
     --fs-lg: 1.125rem;
@@ -59,7 +64,7 @@ h1, h2, h3{
     font-weight: var(--bold);
 }
 h2{
-    color: var(--primary-orange)
+    color: var(--primary-blue)
 }
 ul {
     list-style: none;
@@ -155,6 +160,85 @@ textarea, input{
     padding-right: 0rem;
 }
 
+/* Burger menu */
+.nav_menuBurger_list{
+    column-gap: 3.5rem;
+}
+.nav_menuBurger_link{
+    color: #fff;
+    font-size: 0.7rem;
+    font-family: var(--mono-font);
+    font-weight: var(--bold);
+    text-transform: uppercase;
+    transition: 0.7s;
+}
+.nav_menuBurger_link:hover{
+    color: var(--primary-orange);
+}
+.burger-menu{
+    display: none;
+    height: 0;
+    position: absolute;
+    right: 1rem;
+    top: 58px;
+    width: 210px;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(15px);
+    border-radius: 5px; 
+    overflow: hidden;
+    transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.burger-menu.open{
+    height: auto;
+}
+.burger-menu li{
+    padding: 0.8rem;
+}
+.burger-menu-button{ 
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 1.9rem;
+}
+.burger-menu-button:hover{
+    color: var(--primary-orange);
+}
+@media (max-width: 990px){
+    /* Supprime le fond de l'en-tête sur les écrans de moins de 990px */
+    header { 
+        background: none;
+    }
+    /* Cache les liens de navigation sur les petits écrans */
+    .nav_link{
+        display: none;
+    }
+    /* Affiche le bouton de menu hamburger et ajuste sa marge */
+    .burger-menu-button {
+        display: block;
+        margin-left: 2rem; 
+        margin-bottom: -0.8rem;    
+    }
+    /* Stylise le logo sur les petits écrans */
+    .logo{
+        color: #fff;
+        font-family: var(--mono-font);
+        font-size: var(--fs-h1);
+        margin-left: -5.5rem;
+    }
+    /* Affiche le menu hamburger */
+    .burger-menu{
+        display: block;
+    }
+ }
+
+ @media (max-width: 590px){ /* Ajustements spécifiques pour les écrans de moins de 590px */
+    .burger-menu{
+        left: 1rem;
+        width: unset; /* Supprime toute largeur prédéfinie pour permettre un ajustement flexible */
+    }
+ }
+
 /* ===== Home ===== */
 .container{
     max-width: 1140px;
@@ -187,7 +271,6 @@ textarea, input{
 }
 /* ===== Home bannière ===== */
 .home{
-    
     background-size: contain;
     padding-top: 5.5rem;
     margin-bottom: 4.5rem;
@@ -257,7 +340,8 @@ textarea, input{
     line-height: 1.36em;
     margin-right: 2rem;
     color: var(--primary-orange);
-    opacity: 0.4;
+    opacity: 0.5;
+    transition: 0.8s;
 }
 .home_social-link:hover{
     opacity: 1;
@@ -327,12 +411,12 @@ textarea, input{
 }
 .resume_title,
 .skills_title{
-    color: var(--primary-blue);
+    color: var(--primary-orange);
     letter-spacing: 0.4em;
     margin-bottom: 2.8em;
 }
 .resume_item{
-    border-left: 2px solid var(--primary-color);
+    border-left: 2px solid var(--primary-orange);
     padding-left: 1.6rem;
     position: relative;
 }
@@ -344,17 +428,17 @@ textarea, input{
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--primary-orange);
     position: absolute;
     left: -0.56rem;
     background-color: var(--bg-color);
 }
 .resume_subtitle{
-    color: var(--primary-color);
+    color: var(--primary-blue);
     margin-bottom: 0.36rem;
 }
 .resume_date {
-    color: var(--text-color-alt);
+    color: black;
     margin-bottom: 0.7em;
 }
 .resume_description {
@@ -374,6 +458,12 @@ textarea, input{
     justify-content: space-between;
     margin-bottom: 0.625rem;
 }
+.skills_name,
+.skills_number{
+    font-family: var(--roboto-slab);
+    font-size: var(--fs-base);
+    color: black;
+}
 .skills_bar, 
 .skills_percentage{
     height: 5px;
@@ -383,21 +473,26 @@ textarea, input{
     background-color: var(--bg-color-alt);
 }
 .skills_percentage{
-    background-color: var(--primary-color);
+    background-color: var(--primary-orange);
     display: block;
 }
 
 /* ===== Contact ===== */
 .contact{
     margin-top: 20px;
-    background-image: url(../img/profil.png);
     background-size: contain;
     background-position: auto;
-    position: relative;
+    position: relative; 
+    width: 100%;
+    z-index: 100;
+    padding: 0px 100px;
+    background-color: var(--primary-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .contact::before{
     content: '';
-    background: var(--linear-gradient);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -468,3 +563,5 @@ textarea, input{
     margin-top: 1.75rem;
     text-align: center;
 }
+
+
