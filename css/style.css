@@ -83,7 +83,9 @@ ul {
 a {
     text-decoration: none;
 }
-
+p{
+    text-align: justify;
+}
 img {
     max-width: 100%;
     height: auto;
@@ -262,7 +264,17 @@ body.menu-open::before {
     max-height: 100%;
     border-radius: 100%;
 }
-
+.circle-image {
+    float: right; /* Positionne l'image à droite */
+    margin: 0 0 10px 10px; /* Ajoute un espacement autour de l'image */
+    border-radius: 50%; /* Rend l'image ronde */
+    width: 300px; /* Ajustez la taille de l'image */
+    height: 300px; /* Ajustez la hauteur pour garder le cercle */
+    object-fit: cover; /* Garde les proportions de l'image */
+    shape-outside: circle(); /* Crée une forme circulaire autour de l'image */
+    clip-path: circle(); /* Rend le conteneur réellement rond pour correspondre */
+    margin: 15px 15px 15px 50px; /* Ajoute un espace entre l'image et le texte */
+}
 
 @media (max-width: 910px) {
 
@@ -291,7 +303,7 @@ body.menu-open::before {
 
 /* ===== Home ===== */
 .container {
-    max-width: 1140px;
+    max-width: 1000px;
     margin: auto;
     padding-left: 0.9rem;
     padding-right: 0rem;
@@ -313,7 +325,6 @@ body.menu-open::before {
     font-size: var(--fs-h2);
     line-height: 1;
     font-weight: var(--medium);
-    margin-top: 3rem;
     margin-bottom: 1.2rem;
 }
 
@@ -325,11 +336,13 @@ body.menu-open::before {
     margin-right: 1rem;
 }
 
+
 @media (max-width: 820px) {
     .text-lg {
         margin-right: 1rem;
     }
 }
+
 
 /* ===== Home bannière ===== */
 .home_name,
@@ -349,7 +362,7 @@ body.menu-open::before {
 .home {
     background-size: contain;
     padding-top: 5.5rem;
-    margin-bottom: 4.5rem;
+    margin-bottom: 3.5rem;
     position: relative;
 }
 
@@ -606,6 +619,7 @@ body.menu-open::before {
 /* ===== Compétences ===== */
 
 .skills_container {
+    margin-bottom: 1rem;
     grid-template-columns: repeat(2, 1fr);
     /* Crée 2 colonnes de 500 pixels chacune */
     column-gap: 5rem;
@@ -727,6 +741,7 @@ body.menu-open::before {
 }
 
 .contact_form {
+    margin-top: 2rem;
     position: relative;
     display: flex;
     align-items: center;
