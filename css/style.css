@@ -887,7 +887,7 @@ footer li {
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 330px) {
 
     .button {
         border: 1px solid var(--primary-blue);
