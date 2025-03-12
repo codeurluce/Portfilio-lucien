@@ -402,7 +402,7 @@ body.menu-open::before {
 
 @media (max-width: 450px) {
     .home_container {
-        margin-top: 23%;
+        margin-top: 15%;
         display: flex;
         flex-direction: column;
         align-items: center;
