@@ -15,3 +15,23 @@ window.addEventListener('resize', function() {
         }
     });
 });
+
+// Déclencher une animation lorsque la section contenant les icônes sociales (.contact_socials) devient visible à l'écran.
+
+document.addEventListener("DOMContentLoaded", function () {
+    const socialSection = document.querySelector(".contact_socials");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    socialSection.classList.add("visible"); //ajoute une classe pour declencher l'aniation
+                    observer.unobserve(socialSection); // Désactive l'observation après l'animation
+                }
+            });
+        },
+        { threshold: 0.5 } // Déclenche l'animation quand 50% de la section est visible
+    );
+
+    observer.observe(socialSection);
+});

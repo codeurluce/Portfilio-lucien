@@ -844,26 +844,30 @@ body.menu-open::before {
         position: absolute;
     }
 }
-
 .footer_copy {
-    opacity: 0.5;
+    opacity: 0.5; 
     padding-bottom: 1rem;
-    text-align: center;
+    text-align: center;/* centre le texte horizontalement */
     color: white;
+    width: 100%; /* Pour que l'élément prend toute la largeur du footer */
+    display: flex; 
+   justify-content: center;
+    align-items: center;  /*Centre verticalement (si nécessaire) */
 }
-
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre tous les enfants */
+    justify-content: center;
+    width: 100%; /* Assure que le footer prend toute la largeur */
     margin-top: 3rem;
     background-color: var(--primary-blue);
-    text-align: center;
-    padding: 0px 100px;
-    justify-content: space-between;
-    align-items: center;
+    padding: 10px 100px;
 }
 
 footer li {
     padding-top: 0.5rem;
-    list-style: none;
+    list-style: none; /* Supprime les puces de la liste  */
     display: inline-block;
     margin: 10px;
 }
@@ -922,4 +926,23 @@ footer li {
     background-color: white;
     color: var(--primary-orange);
 }
+.contact_socials li {
+    display: inline-block;
+    margin: 10px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
 
+/* Ajoute un décalage progressif pour chaque élément */
+.contact_socials li:nth-child(1) { transition-delay: 0.2s; }
+.contact_socials li:nth-child(2) { transition-delay: 0.4s; }
+.contact_socials li:nth-child(3) { transition-delay: 0.6s; }
+.contact_socials li:nth-child(4) { transition-delay: 0.8s; }
+.contact_socials li:nth-child(5) { transition-delay: 1s; }
+
+/* Quand la classe "visible" est ajoutée, applique l'animation */
+.contact_socials.visible li {
+    opacity: 1;
+    transform: translateX(0);
+}
