@@ -946,3 +946,20 @@ footer li {
     opacity: 1;
     transform: translateX(0);
 }
+.contact_input-div .error-txt{
+    font-size: 14.5px;
+    color: #FF8C00;
+    text-align: left;
+    margin: 5px 0 0 15px;
+    font-style: italic;
+    display: none;
+}
+
+.contact_input-div.error .error-txt{
+    display: block;
+}
+
+
+.contact_input-div.error .contact_input{
+    border-color: #FF8C00;
+}

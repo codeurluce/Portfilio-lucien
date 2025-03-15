@@ -12,7 +12,7 @@
 
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" /> -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script src="../Portfilio-lucien/js/scroll.js"></script>
+    <script src="../Portfilio-lucien/js/scroll.js"></script>
     <title>Portfolio Website</title>
 </head>
 
@@ -79,7 +79,7 @@
             <!-- -->
             <div data-aos="fade-right" data-aos-duration="600">
                 <img src="../Portfilio-lucien/img/Portrait5.jpg" alt="portrait image" class="circle-image">
-                <p class="text-lg" >
+                <p class="text-lg">
                     Je suis [Votre Nom], développeur web débutant avec une passion profonde pour la création de pages
                     web
                     dynamiques et interactives.
@@ -327,21 +327,32 @@
             <!-- zoom-out -->
             <div data-aos="zoom-in" data-aos-duration="1000" class="contact_content">
                 <div class="contact_form">
-                    <form action="" id="contact-form">
+
+                    <form action="#" id="contact-form">
+
                         <div class="form-row">
                             <div class="contact_input-div">
-                                <input type="text" placeholder="votre nom" class="contact_input" id="contact-name">
+                                <input type="text" placeholder="votre nom" class="contact_input" id="name"
+                                    autocomplete="off">
+                                <div class="error-txt">Ce champ ne peut être vide</div>
                             </div>
                             <div class="contact_input-div">
-                                <input type="email" placeholder="votre mail" class="contact_input" id="contact-email">
+                                <input type="email" placeholder="votre mail" class="contact_input" id="email"
+                                    autocomplete="off">
+                                <div class="error-txt email">Ce champ ne peut être vide</div>
                             </div>
                         </div>
+
                         <div class="contact_input-div">
                             <textarea placeholder="Entrez votre Message" id="message" class="contact_input textarea"
-                                cols="30" rows="5"></textarea>
+                                cols="30" rows="5" autocomplete="off"></textarea>
+                            <div class="error-txt">Ce champ ne peut être vide</div>
+
                         </div>
                         <button class="button contact_button" type="submit">Envoyer</button>
+
                     </form>
+
                 </div>
             </div>
 
@@ -350,7 +361,10 @@
     </main>
 
     <!-- ===== Emailjs =====-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
 
     <footer>
         <ul class="contact_socials">
@@ -381,9 +395,8 @@
     <!-- Cette bibliothèque est utilisée pour ajouter des animations aux éléments HTML 
     lorsqu'ils apparaissent dans le champ de vision de l'utilisateur, lors du défilement de la page -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script> AOS.init(); </script>
+
 </body>
 
 </html>
