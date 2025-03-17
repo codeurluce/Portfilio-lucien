@@ -328,30 +328,26 @@
             <div data-aos="zoom-in" data-aos-duration="1000" class="contact_content">
                 <div class="contact_form">
 
-                    <form action="#" id="contact-form">
-
+                    <form id="contact-form">
                         <div class="form-row">
                             <div class="contact_input-div">
-                                <input type="text" placeholder="votre nom" class="contact_input" id="name"
-                                    autocomplete="off">
+                                <input type="text" name="name" id="name" placeholder="Votre nom" class="contact_input" autocomplete="off">
                                 <div class="error-txt">Ce champ ne peut être vide</div>
                             </div>
                             <div class="contact_input-div">
-                                <input type="email" placeholder="votre mail" class="contact_input" id="email"
-                                    autocomplete="off">
+                                <input type="email" name="email" id="email" placeholder="Votre mail" class="contact_input" autocomplete="off">
                                 <div class="error-txt email">Ce champ ne peut être vide</div>
                             </div>
                         </div>
-
+                    
                         <div class="contact_input-div">
-                            <textarea placeholder="Entrez votre Message" id="message" class="contact_input textarea"
-                                cols="30" rows="5" autocomplete="off"></textarea>
+                            <textarea name="message" id="message" placeholder="Entrez votre Message" class="contact_input textarea" cols="30" rows="5" autocomplete="off"></textarea>
                             <div class="error-txt">Ce champ ne peut être vide</div>
-
                         </div>
+                        
                         <button class="button contact_button" type="submit">Envoyer</button>
-
                     </form>
+                    
 
                 </div>
             </div>
@@ -362,9 +358,9 @@
 
     <!-- ===== Emailjs =====-->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="js/script.js"></script>
     <script src="js/contact.js"></script>
+    <script src="js/script.js"></script>
+
 
     <footer>
         <ul class="contact_socials">
@@ -394,6 +390,7 @@
 
     <!-- Cette bibliothèque est utilisée pour ajouter des animations aux éléments HTML 
     lorsqu'ils apparaissent dans le champ de vision de l'utilisateur, lors du défilement de la page -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script> AOS.init(); </script>
 

@@ -1,97 +1,69 @@
-const form = document.querySelector('form');
-
-const fullName = document.getElementById('name');
-const email = document.getElementById('email');
-const message = document.getElementById('message');
-
-function envoyerMail() {
-    const bodyMessage = `Nom Complet : ${fullName.value} <br> 
-                         Email:       ${email.value} <br> 
-                         Message:     ${message.value}`;
-
-    Email.send({
-        SecureToken: "3452bf47-f7a0-4f59-a465-592762a27f26",
-        To: 'boama561@gmail.com',
-        From: "boama561@gmail.com",
-        Subject: "Confirmation de votre demande ✔️",
-        Body: bodyMessage
-    }).then(
-        message => {
-            if (message == "OK") {
-                Swal.fire({
-                    title: "Succès!",
-                    text: "Message envoyé avec succès!",
-                    icon: "success",
-                    confirmButtonColor: "#6c5ce7",
-                    confirmButtonText: "OK"
-                });
-            }
-        }
-    ).catch(
-        error => alert("Erreur: " + error)
-    );
-}
-
-function verifierLesInputs() {
-        const items = document.querySelectorAll('.contact_input');
-        for (const contact_input of items) {
-            if (contact_input.value == "") {
-                contact_input.classList.add('error');
-                contact_input.parentElement.classList.add('error');
-            }
-
-            if  (items[1].value != ""){
-                checkEmail();
-            } 
-            items[1].addEventListener("keyup", () => {
-                checkEmail();
-            });
-            
-            contact_input.addEventListener("keyup", () => {
-                if (contact_input.value != "") {
-                    contact_input.classList.remove('error');
-                    contact_input.parentElement.classList.remove('error');
-                }
-                else {
-                    contact_input.classList.add('error');
-                    contact_input.parentElement.classList.add('error')
-                }
-            })
-        }
-    }
-
-function checkEmail(){
-    const emailRegrex = /^([a-zA-Z\d\.-]+)@([a-zA-Z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
- //                   /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-
-    const errorTxtEmail = document.querySelector(".error-txt.email")
-
-    if (!email.value.match(emailRegrex)) {
-        email.classList.add("error")
-        email.parentElement.classList.add("error")
-
-        if(email.value != ""){
-            errorTxtEmail.innerText = "Entrer une adresse mail valide"
-        }else{
-            errorTxtEmail.innerText = "Ce champ ne peut être vide"
-        }
-    }else {
-        email.classList.remove("error");
-        email.parentElement.classList.remove('error')
-    }
-}
-
-form.addEventListener("submit", (e) => {
+document.getElementById("contact-form").addEventListener("submit", async (e) => {
     e.preventDefault();
-    verifierLesInputs();
 
-    if(!fullName.classList.contains("error") && !email.classList.contains("error") && !message.classList.contains("error")) {
-        console.log('OK');
+    const email = document.getElementById("email").value;
+    
+    // Fonction de validation de l'email
+    const validateEmail = (email) => {
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
+        return emailPattern.test(email);
+    };
+
+    if (!validateEmail(email)) {
+        Swal.fire({
+            title: "Erreur !",
+            text: "❌ L'email que vous avez entré est invalide. Veuillez le vérifier.",
+            icon: "error",
+            confirmButtonColor: "#e74c3c",
+            confirmButtonText: "OK"
+        });
+        return;  // Stoppe l'envoi du formulaire si l'email est invalide
     }
-envoyerMail();
 
-form.reset();
-return false;
-    // document.getElementById("contact-form").reset();  une maniere de reinitialiser la saisie des donnees de l'utilisateur
+    // Prépare les données du formulaire
+    const formData = {
+        name: document.getElementById("name").value,
+        email: email,
+        message: document.getElementById("message").value
+    };
 
+    try {
+        // Envoie la requête à ton proxy Netlify
+        const response = await fetch("https://ton-site.netlify.app/.netlify/functions/sendMail", { 
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+        console.log(result);
+
+        // Affichage du résultat via Swal
+        if (result.success) {
+            Swal.fire({
+                title: "Succès !",
+                text: "✅ Message envoyé avec succès !",
+                icon: "success",
+                confirmButtonColor: "#6c5ce7",
+                confirmButtonText: "OK"
+            });
+            document.getElementById("contact-form").reset();
+        } else {
+            Swal.fire({
+                title: "Erreur !",
+                text: "❌ Erreur lors de l'envoi : " + result.message,
+                icon: "error",
+                confirmButtonColor: "#e74c3c",
+                confirmButtonText: "OK"
+            });
+        }
+    } catch (error) {
+        Swal.fire({
+            title: "Erreur !",
+            text: "❌ Une erreur s'est produite : " + error.message,
+            icon: "error",
+            confirmButtonColor: "#e74c3c",
+            confirmButtonText: "OK"
+        });
+    }
 });
