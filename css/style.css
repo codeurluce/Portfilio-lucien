@@ -861,7 +861,7 @@ footer {
     justify-content: center;
     width: 100%; /* Assure que le footer prend toute la largeur */
     margin-top: 3rem;
-    background-color: var(--primary-blue);
+    background-color: red;
     padding: 10px 100px;
 }
 
@@ -876,7 +876,7 @@ footer li {
 
     footer {
         margin-top: 3rem;
-        background-color: red;
+        background-color: var(--primary-blue);
         text-align: center;
         padding: 0px;
         justify-content: space-between;
