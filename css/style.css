@@ -862,7 +862,7 @@ footer {
     width: 100%; /* Assure que le footer prend toute la largeur */
     margin-top: 3rem;
     background-color: var(--primary-blue);
-    padding: 10px 100px;
+    padding: 10px 100px; 
 }
 
 footer li {
