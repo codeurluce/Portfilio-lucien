@@ -29,7 +29,7 @@ document.getElementById("contact-form").addEventListener("submit", async (e) => 
 
     try {
         // Envoie la requête à ton proxy Netlify
-        const response = await fetch("https://ton-site.netlify.app/.netlify/functions/sendMail", { 
+        const response = await fetch("https://lighthearted-chaja-fc3dd9.netlify.app/.netlify/functions/sendMail", { 
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
