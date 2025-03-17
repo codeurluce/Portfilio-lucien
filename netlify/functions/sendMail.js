@@ -21,7 +21,7 @@ exports.handler = async (event) => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-            access_key: process.env.WEB3FORMS_ACCESS_KEY, // Clé cachée
+            access_key: process.env.WEB3FORMS_ACCESS_KEY,
             name: formData.name,
             email: formData.email,
             message: formData.message,
