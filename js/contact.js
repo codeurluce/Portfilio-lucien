@@ -2,7 +2,7 @@ document.getElementById("contact-form").addEventListener("submit", async (e) => 
     e.preventDefault();
 
     const email = document.getElementById("email").value;
-    
+
     // Fonction de validation de l'email
     const validateEmail = (email) => {
         const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
@@ -29,7 +29,7 @@ document.getElementById("contact-form").addEventListener("submit", async (e) => 
 
     try {
         // Envoie la requête à ton proxy Netlify
-        const response = await fetch("https://lighthearted-chaja-fc3dd9.netlify.app/.netlify/functions/sendMail", { 
+        const response = await fetch("https://lighthearted-chaja-fc3dd9.netlify.app/.netlify/functions/sendMail", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)

@@ -60,7 +60,7 @@ textarea {
 }
 
 body {
-    overflow-x: hidden; 
+    overflow-x: hidden;
     background-color: var(--bg-color);
     color: var(--text-color);
 }
@@ -83,9 +83,11 @@ ul {
 a {
     text-decoration: none;
 }
-p{
+
+p {
     text-align: justify;
 }
+
 img {
     max-width: 100%;
     height: auto;
@@ -113,9 +115,9 @@ input {
     justify-content: space-between;
     align-items: center;
 }
-@media (max-width: 400px){
-    .header
-    {
+
+@media (max-width: 400px) {
+    .header {
         height: 30px;
     }
 }
@@ -167,16 +169,16 @@ input {
 
 }
 
-  .navcontainer {
+.navcontainer {
     max-width: 1140px;
     padding-left: 0.9rem;
-    padding-right: 0rem; 
-}   
+    padding-right: 0rem;
+}
 
 /* Burger menu*/
 .nav_menuBurger_list {
     column-gap: 3.5rem;
-} 
+}
 
 .nav_menuBurger_list a {
     padding: 10px 20px;
@@ -188,26 +190,34 @@ input {
     display: block;
     position: fixed;
     top: 0;
-    right: -100%; /* Masqué à droite hors de l'écran */
+    right: -100%;
+    /* Masqué à droite hors de l'écran */
     height: 100%;
-    width: 250px; /* Largeur du menu */
+    width: 250px;
+    /* Largeur du menu */
     z-index: 1000;
     background: #00bcd4;
     backdrop-filter: blur(15px);
     border-left: solid 1px var(--primary-blue);
     padding: 1rem;
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
-    transition: right 0.5s ease-in-out; /* Transition d'apparition */
+    transition: right 0.5s ease-in-out;
+    /* Transition d'apparition */
 }
+
 .burger-menu.open {
-    right: 0; /* Apparaît à l'écran depuis la droite */
+    right: 0;
+    /* Apparaît à l'écran depuis la droite */
 }
 
 /* Effet de décalage du contenu principal */
 body.menu-open {
-    transform: translateX(-250px); /* Déplace tout le contenu principal de 250px vers la gauche */
-    transition: transform 0.5s ease-in-out; /* Animation fluide du décalage */
-    overflow: hidden; /* Empêche le défilement de la page */
+    transform: translateX(-250px);
+    /* Déplace tout le contenu principal de 250px vers la gauche */
+    transition: transform 0.5s ease-in-out;
+    /* Animation fluide du décalage */
+    overflow: hidden;
+    /* Empêche le défilement de la page */
 }
 
 /* Optionnel : Griser l'arrière-plan */
@@ -218,9 +228,12 @@ body.menu-open::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5); /* Couche semi-transparente grise */
-    z-index: 900; /* Derrière le menu mais au-dessus du contenu principal */
+    background: rgba(0, 0, 0, 0.5);
+    /* Couche semi-transparente grise */
+    z-index: 900;
+    /* Derrière le menu mais au-dessus du contenu principal */
 }
+
 .burger-menu li {
     padding: 0.6rem;
     color: var(--primary-blue);
@@ -264,16 +277,26 @@ body.menu-open::before {
     max-height: 100%;
     border-radius: 100%;
 }
+
 .circle-image {
-    float: right; /* Positionne l'image à droite */
-    margin: 0 0 10px 10px; /* Ajoute un espacement autour de l'image */
-    border-radius: 50%; /* Rend l'image ronde */
-    width: 300px; /* Ajustez la taille de l'image */
-    height: 300px; /* Ajustez la hauteur pour garder le cercle */
-    object-fit: cover; /* Garde les proportions de l'image */
-    shape-outside: circle(); /* Crée une forme circulaire autour de l'image */
-    clip-path: circle(); /* Rend le conteneur réellement rond pour correspondre */
-    margin: 15px 15px 15px 50px; /* Ajoute un espace entre l'image et le texte */
+    float: right;
+    /* Positionne l'image à droite */
+    margin: 0 0 10px 10px;
+    /* Ajoute un espacement autour de l'image */
+    border-radius: 50%;
+    /* Rend l'image ronde */
+    width: 300px;
+    /* Ajustez la taille de l'image */
+    height: 300px;
+    /* Ajustez la hauteur pour garder le cercle */
+    object-fit: cover;
+    /* Garde les proportions de l'image */
+    shape-outside: circle();
+    /* Crée une forme circulaire autour de l'image */
+    clip-path: circle();
+    /* Rend le conteneur réellement rond pour correspondre */
+    margin: 15px 15px 15px 50px;
+    /* Ajoute un espace entre l'image et le texte */
 }
 
 @media (max-width: 910px) {
@@ -562,7 +585,7 @@ body.menu-open::before {
 /* ===== Parcours & experiences ===== */
 .resume_container {
     grid-template-columns: repeat(2, 1fr);
-   
+
 }
 
 @media (max-width: 770px) {
@@ -844,30 +867,38 @@ body.menu-open::before {
         position: absolute;
     }
 }
+
 .footer_copy {
-    opacity: 0.5; 
+    opacity: 0.5;
     padding-bottom: 1rem;
-    text-align: center;/* centre le texte horizontalement */
+    text-align: center;
+    /* centre le texte horizontalement */
     color: white;
-    width: 100%; /* Pour que l'élément prend toute la largeur du footer */
-    display: flex; 
-   justify-content: center;
-    align-items: center;  /*Centre verticalement (si nécessaire) */
+    width: 100%;
+    /* Pour que l'élément prend toute la largeur du footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*Centre verticalement (si nécessaire) */
 }
+
 footer {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre tous les enfants */
+    align-items: center;
+    /* Centre tous les enfants */
     justify-content: center;
-    width: 100%; /* Assure que le footer prend toute la largeur */
+    width: 100%;
+    /* Assure que le footer prend toute la largeur */
     margin-top: 3rem;
     background-color: var(--primary-blue);
-    padding: 10px 100px; 
+    padding: 10px 100px;
 }
 
 footer li {
     padding-top: 0.5rem;
-    list-style: none; /* Supprime les puces de la liste  */
+    list-style: none;
+    /* Supprime les puces de la liste  */
     display: inline-block;
     margin: 10px;
 }
@@ -926,6 +957,7 @@ footer li {
     background-color: white;
     color: var(--primary-orange);
 }
+
 .contact_socials li {
     display: inline-block;
     margin: 10px;
@@ -935,18 +967,33 @@ footer li {
 }
 
 /* Ajoute un décalage progressif pour chaque élément */
-.contact_socials li:nth-child(1) { transition-delay: 0.2s; }
-.contact_socials li:nth-child(2) { transition-delay: 0.4s; }
-.contact_socials li:nth-child(3) { transition-delay: 0.6s; }
-.contact_socials li:nth-child(4) { transition-delay: 0.8s; }
-.contact_socials li:nth-child(5) { transition-delay: 1s; }
+.contact_socials li:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.contact_socials li:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.contact_socials li:nth-child(3) {
+    transition-delay: 0.6s;
+}
+
+.contact_socials li:nth-child(4) {
+    transition-delay: 0.8s;
+}
+
+.contact_socials li:nth-child(5) {
+    transition-delay: 1s;
+}
 
 /* Quand la classe "visible" est ajoutée, applique l'animation */
 .contact_socials.visible li {
     opacity: 1;
     transform: translateX(0);
 }
-.contact_input-div .error-txt{
+
+.contact_input-div .error-txt {
     font-size: 14.5px;
     color: #FF8C00;
     text-align: left;
@@ -955,11 +1002,11 @@ footer li {
     display: none;
 }
 
-.contact_input-div.error .error-txt{
+.contact_input-div.error .error-txt {
     display: block;
 }
 
 
-.contact_input-div.error .contact_input{
+.contact_input-div.error .contact_input {
     border-color: #FF8C00;
 }
