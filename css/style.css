@@ -484,6 +484,10 @@ body.menu-open::before {
         text-align: center;
         height: auto;
     }
+    .home {    
+        margin-bottom: -5rem;
+    }
+
 
     .home_img {
         width: 90%;
