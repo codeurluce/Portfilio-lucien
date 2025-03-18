@@ -398,6 +398,7 @@ body.menu-open::before {
     font-size: var(--fs-h2);
     line-height: 1;
     font-weight: var(--medium);
+    margin-top: 1.5rem;
     margin-bottom: 1.2rem;
 }
 
