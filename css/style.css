@@ -1068,8 +1068,14 @@ footer li {
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    opacity: 0;
+    opacity: 0; 
+    will-change: transform, opacity;
 }
+/* Appliquer l'animation quand la classe `visible` est ajoutée */
+.card.visible {
+    animation: fadeInLeft 0.6s ease-out forwards;
+}
+
 @keyframes fadeInLeft {
     from {
         opacity: 0;
@@ -1079,12 +1085,13 @@ footer li {
         opacity: 1;
         transform: translateX(0);
     }
-}
+} 
 
-/* Appliquer l'animation quand la classe `visible` est ajoutée */
-.card.visible {
-    animation: fadeInLeft 0.6s ease-out forwards;
-}
+.card:hover{
+    background-color: transparent;
+    transform: translateY(-8px);
+} 
+
 .card i{
     color: #FF8C00;
     margin-top: 5px;
@@ -1116,18 +1123,12 @@ footer li {
     opacity: 0.5;
     transition: 1s;
 }
-.card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+
 .card:hover:after{
     width: 225%;
     top: -100%;
 }
- .card:hover{
-    background-color: transparent;
-    transform: translateY(-8px);
-} 
+
 @media screen and (max-width:1000px) {
     .cards{
         grid-template-columns: repeat(2,1fr);
