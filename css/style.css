@@ -377,15 +377,13 @@ body.menu-open::before {
 /* ===== Home ===== */
 .container {
     width: 100%;
-    max-width: min(90%, 1000px); /* Adapte la largeur sans dépasser 1000px */
+    max-width: min(90%, 1100px); /* Adapte la largeur sans dépasser 1000px */
     margin: auto;
     padding-inline: 0.9rem 0rem;
 }
 
 .grid {
     display: grid;
-    /* grid-template-columns: 1fr 1fr;
-    gap: 200px; */
 }
 
 .section {
@@ -567,71 +565,6 @@ body.menu-open::before {
     opacity: 1;
 }
 
-/* ===== Services ===== */
-.services_container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.575rem;
-}
-
-.services_item {
-    border: 1px solid var(--border-color);
-    padding: 2.5rem 1.25rem 1.875rem;
-    text-align: center;
-}
-
-.icon_box {
-    border: 1px solid var(--border-color);
-    width: 80px;
-    height: 60px;
-    border-radius: 10%;
-    margin: 0 auto;
-    margin-bottom: 1.25rem;
-    position: relative;
-    display: flex;
-}
-
-.services_icon {
-    width: 50px;
-    margin: auto;
-}
-
-.services_dot {
-    position: absolute;
-    left: -20px;
-    top: 0;
-    width: 150%;
-    height: 100%;
-    animation: service-dot 2s linear infinite;
-    animation-play-state: paused;
-}
-
-.services_item:hover .services_dot {
-    animation-play-state: running;
-}
-
-@keyframes service-dot {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(1turn);
-    }
-}
-
-.dot {
-    width: 13px;
-    height: 13px;
-    background-color: var(--title-color);
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 0.9rem;
-}
-
-.services_title {
-    margin-bottom: 0.8em;
-}
 
 /* ===== Parcours & experiences ===== */
 .resume_container {
@@ -1108,4 +1041,84 @@ footer li {
 
 .contact_input-div.error .contact_input {
     border-color: #FF8C00;
+}
+/* =========================== Services ============================= */
+.services_container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.575rem;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.card{
+    height: 210px;
+    width: 350px;
+    background-color: #fff;
+    padding: 2% 5%;
+    border: 0.5px solid #03678e;
+    border-radius: 10px;
+    transition: 0.6s;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.card i{
+    color: #FF8C00;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 3.5rem;
+}
+
+.card h3{
+    color: black;
+    font-size: 600;
+    letter-spacing: 1px;
+}
+.card p{
+    text-align: start;
+    width: 100%;
+    margin: 12px 0;
+    color: black;
+}
+.card:after{
+    content: "";
+    position: absolute;
+    top: 150%;
+    left: -200px;
+    width: 120%;
+    transform: rotate(50deg);
+    background-color: #03678e;
+    height: 18px;
+    filter: blur(30px);
+    opacity: 0.5;
+    transition: 1s;
+}
+.card:hover:after{
+    width: 225%;
+    top: -100%;
+}
+ .card:hover{
+    background-color: transparent;
+    transform: translateY(-8px);
+} 
+@media screen and (max-width:1000px) {
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+    }
+}
+@media screen and (max-width:700px) {
+    .cards{
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+    }
+
 }
