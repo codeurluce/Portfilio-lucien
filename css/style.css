@@ -444,21 +444,6 @@ body.menu-open::before {
     }
 }
 
-.text-lg {
-    font-size: var(--fs-lg);
-    line-height: 1.6rem;
-    color: black;
-    text-align: justify;
-    margin-right: 1rem;
-}
-
-@media (max-width: 820px) {
-    .text-lg {
-        margin-right: 1rem;
-
-    }
-}
-
 /* ===== Home bannière ===== */
 .home_name,
 .home_work,
@@ -604,59 +589,12 @@ body.menu-open::before {
 }
 
 /* ===== Parcours & experiences ===== */
-.resume_container {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-@media (max-width: 770px) {
-    .resume_container {
-        grid-template-columns: 1fr;
-        margin-right: 1rem;
-    }
-}
-
-.resume_title,
 .skills_title {
     color: var(--primary-orange);
     letter-spacing: 0.4em;
     margin: 1.5rem 2rem;
     margin-top: 1.5rem;
     margin-bottom: 2em;
-}
-
-.resume_item {
-    border-left: 2px solid var(--primary-orange);
-    padding-left: 1.6rem;
-    position: relative;
-}
-
-.resume_item:not(:last-child) {
-    padding-bottom: 3rem;
-}
-
-.resume_item::before {
-    content: '';
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 2px solid var(--primary-orange);
-    position: absolute;
-    left: -0.56rem;
-    background-color: var(--bg-color);
-}
-
-.resume_subtitle {
-    color: var(--primary-blue);
-    margin-bottom: 0.36rem;
-}
-
-.resume_date {
-    color: black;
-    margin-bottom: 0.7em;
-}
-
-.resume_description {
-    text-align: justify;
 }
 
 /* ===== Compétences ===== */
@@ -1089,13 +1027,14 @@ footer li {
     gap: 30px;
     margin-top: 3rem;
     justify-content: center;
+    margin-right: 1rem;
 }
 
 .card{
     height: 210px;
-    width: 350px;
+    width: 320px;
     background-color: #fff;
-    padding: 2% 5%;
+    padding: 2% 4%;
     border: 0.5px solid #03678e;
     border-radius: 10px;
     transition: 0.6s;
@@ -1146,6 +1085,7 @@ footer li {
     margin: 12px 0;
     color: black;
 }
+
 .card:after{
     content: "";
     position: absolute;
@@ -1165,7 +1105,7 @@ footer li {
     top: -100%;
 }
 
-@media screen and (max-width:1125px) {
+@media screen and (max-width:1130px) {
     .cards{
         grid-template-columns: repeat(3,1fr);
         gap: 30px;
@@ -1174,28 +1114,37 @@ footer li {
     .card{
         width: 260px;
         height: 250px;
-    padding: 2% 5%;
+        padding: 2% 5%;
 
     }    
     
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 940px) {
     .cards{
         grid-template-columns: repeat(2,1fr);
         justify-items: center;
-        gap: 30px;
+
     }
     .card{
-        width: 350px;
+        width: 320px;
     }  
     }
 
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:735px) {
     .cards{
         grid-template-columns: repeat(1,1fr);
         justify-items: center;
     }
-
+}
+    @media screen and (max-width:360px) {
+              .card{
+                width: 250px;
+              }
+}
+@media screen and (max-width:280px) {
+    .card{
+      width: 200px;
+    }
 }
