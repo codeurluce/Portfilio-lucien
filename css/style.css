@@ -197,7 +197,7 @@ input {
 }
 @media screen and (max-width: 480px) {
     .change-text {
-        text-align: left;   /* Aligne à gauche si souhaité      */
+        text-align: start;   /* Aligne à gauche si souhaité      */
         margin-left: 10px; /* Décale légèrement vers la gauche */
     }
 }
@@ -334,6 +334,7 @@ body.menu-open::before {
     margin: 15px 15px 15px 50px;    /* Ajoute un espace entre l'image et le texte */
 }
 
+
 /* S'assurer que l'élément ne se déplace pas hors de la vue */
 [data-aos="fade-left"] {
     position: relative;
@@ -366,7 +367,7 @@ body.menu-open::before {
         /* margin-left: 10px; */
     }
 
-    .nav_menuBurger_list a {
+.nav_menuBurger_list a {
         display: block;
     }
 
@@ -413,11 +414,12 @@ body.menu-open::before {
 .grid {
     display: grid;
 }
-
 .section {
     padding-top: 2rem;
     padding-bottom: 0rem;
     justify-content: center;
+    position: relative;
+    border: 1px solid red;
 }
 
 .section_title{
@@ -427,6 +429,21 @@ body.menu-open::before {
     margin-top: 1.5rem;
     margin-bottom: 1.2rem;
 }
+
+@media screen and (max-width: 768px) { 
+    .section_title {
+        font-size: calc(var(--fs-h2) * 0.8); /* Réduit la taille de 20% */
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) { 
+    .section_title {
+        font-size: calc(var(--fs-h2) * 0.6); /* Réduit encore plus pour les très petits écrans */
+        text-align: center;
+    }
+}
+
 .text-lg {
     font-size: var(--fs-lg);
     line-height: 1.6rem;
@@ -456,7 +473,11 @@ body.menu-open::before {
     line-height: 1em;
     margin: 0 0 0.2em;
 }
-
+@media screen and (max-width: 450px) {
+    .home_name {
+        padding-top: 0.5rem; /* Ajuste la marge supérieure selon tes besoins */
+    }
+}
 .home {
     background-size: contain;
     padding-top: 5.5rem;
@@ -491,10 +512,8 @@ body.menu-open::before {
     border-radius: 0.5rem;
     transform: translateY(3.5rem);
     box-shadow: 0 0 20px white;
-    transition: filter 2s ease;
-    /* Durée de la transition à 0.5 seconde */
-    filter: grayscale(100%);
-    /* Image en noir et blanc par défaut */
+    transition: filter 2s ease;    /* Durée de la transition à 0.5 seconde */
+    filter: grayscale(100%);       /* Image en noir et blanc par défaut */
 }
 
 
@@ -508,14 +527,10 @@ body.menu-open::before {
         text-align: center;
         height: auto;
     }
-    .home {    
-        margin-bottom: -5rem;
-    }
+    .home {margin-bottom: -5rem;}
 
 
-    .home_img {
-        width: 90%;
-    }
+    .home_img {width: 90%;}
 
     .home_container img {
         margin-bottom: 0;
@@ -526,13 +541,9 @@ body.menu-open::before {
 
     }
 
-    .home_name {
-        margin-top: 18%;
-    }
+    .home_name {margin-top: 18%;}
 
-    .home_list {
-        margin-bottom: 30%;
-    }
+    .home_list {margin-bottom: 30%;}
 }
 
 .home_img:hover {
@@ -592,11 +603,9 @@ body.menu-open::before {
     opacity: 1;
 }
 
-
 /* ===== Parcours & experiences ===== */
 .resume_container {
     grid-template-columns: repeat(2, 1fr);
-
 }
 
 @media (max-width: 770px) {
