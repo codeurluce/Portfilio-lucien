@@ -161,6 +161,40 @@ input {
     font-size: var(--fs-h1);
 }
 
+
+.change-text{
+    font-size: 1rem;
+    color: #FF8C00;
+    margin-bottom: 30px;
+    margin-left: 2rem;
+    letter-spacing: 2px;
+}
+
+.change-text h3{
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+}
+.change-text h3 .word{
+    position:absolute;
+    display: flex;
+    opacity: 0;
+}
+.change-text h3 .word .letter{
+    transform-origin: center center -10px;  
+}
+
+.change-text h3 .word .letter.out{
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6,0,0.7,0.2);
+}
+.change-text h3 .word .letter.in {
+    transition: transform 0.38s ease;
+}
+.change-text h3 .word .letter.behind {
+    transform: rotateX(-90deg); /* Applique la rotation */
+    transition: transform 0.38s ease; /* Ajoute une transition fluide */
+}
 /* ===== Active Link ===== */
 .active-link {
     /* opacity: 0.5; */
@@ -283,24 +317,15 @@ body.menu-open::before {
 }
 
 .circle-image {
-    float: right;
-    /* Positionne l'image à droite */
-    margin: 0 0 10px 10px;
-    /* Ajoute un espacement autour de l'image */
-    border-radius: 50%;
-    /* Rend l'image ronde */
-    width: 300px;
-    /* Ajustez la taille de l'image */
-    height: 300px;
-    /* Ajustez la hauteur pour garder le cercle */
-    object-fit: cover;
-    /* Garde les proportions de l'image */
-    shape-outside: circle();
-    /* Crée une forme circulaire autour de l'image */
-    clip-path: circle();
-    /* Rend le conteneur réellement rond pour correspondre */
-    margin: 15px 15px 15px 50px;
-    /* Ajoute un espace entre l'image et le texte */
+    float: right;    /* Positionne l'image à droite */
+    margin: 0 0 10px 10px;    /* Ajoute un espacement autour de l'image */
+    border-radius: 50%;    /* Rend l'image ronde */
+    width: 300px;    /* Ajustez la taille de l'image */
+    height: 300px;    /* Ajustez la hauteur pour garder le cercle */
+    object-fit: cover;    /* Garde les proportions de l'image */
+    shape-outside: circle();    /* Crée une forme circulaire autour de l'image */
+    clip-path: circle();    /* Rend le conteneur réellement rond pour correspondre */
+    margin: 15px 15px 15px 50px;    /* Ajoute un espace entre l'image et le texte */
 }
 
 /* S'assurer que l'élément ne se déplace pas hors de la vue */
@@ -313,12 +338,9 @@ body.menu-open::before {
 @media (max-width: 910px) {
 
     [data-aos="fade-left"] {
-        animation: none !important;
-        /* Désactive fade-left */
-        opacity: 1 !important;
-        /* Assure que l'élément est visible */
-        transform: translateY(0) !important;
-        /* Applique fade-up */
+        animation: none !important;        /* Désactive fade-left */
+        opacity: 1 !important;        /* Assure que l'élément est visible */
+        transform: translateY(0) !important;        /* Applique fade-up */
     }
 
     /* Optionnel : appliquer fade-up sur les petits écrans */
@@ -427,7 +449,7 @@ body.menu-open::before {
 .home_name {
     font-size: var(--fs-h1);
     line-height: 1em;
-    margin: 0 0 0.15em;
+    margin: 0 0 0.2em;
 }
 
 .home {
