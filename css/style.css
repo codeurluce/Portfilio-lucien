@@ -419,7 +419,7 @@ body.menu-open::before {
     padding-bottom: 0rem;
     justify-content: center;
     position: relative;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .section_title{
@@ -586,85 +586,6 @@ body.menu-open::before {
 
 .home_social-link:hover {
     opacity: 1;
-}
-
-/* ===== Parcours & experiences ===== */
-.skills_title {
-    color: var(--primary-orange);
-    letter-spacing: 0.4em;
-    margin: 1.5rem 2rem;
-    margin-top: 1.5rem;
-    margin-bottom: 2em;
-}
-
-/* ===== Compétences ===== */
-
-.skills_container {
-    margin-bottom: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-    /* Crée 2 colonnes de 500 pixels chacune */
-    column-gap: 5rem;
-    /* Ajoute un espacement de 7rem entre les colonnes */
-    display: grid;
-    /* Définit le conteneur comme une grille */
-}
-
-@media (max-width: 820px) {
-    .skills_container {
-        grid-template-columns: 1fr;
-    }
-
-    .skills_content {
-        margin-bottom: 3rem;
-        /* Ajoute une marge inférieure de 3rem pour espacer cet élément des éléments suivants */
-    }
-
-    .skills_list {
-        margin-right: 1rem;
-    }
-
-}
-
-.skills_list {
-    row-gap: 0.625rem;
-    /* Définit un espacement de 0.625rem entre les lignes des éléments */
-}
-
-.skills_titles {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.625rem;
-}
-
-.skills_name,
-.skills_number {
-    font-family: var(--roboto-slab);
-    font-size: var(--fs-base);
-    color: black;
-}
-
-.skills_bar,
-.skills_percentage {
-    height: 5px;
-    border-radius: 0.25rem;
-}
-
-.skills_bar {
-    background-color: var(--bg-color-alt);
-}
-
-.skills_percentage {
-    background-color: var(--primary-orange);
-    display: block;
-}
-
-@media (max-width: 1024px) {
-
-    .skills_list,
-    .text-lg {
-        margin-left: 1rem;
-        margin-right: 2rem;
-    }
 }
 
 /* ===== Contact ===== */
