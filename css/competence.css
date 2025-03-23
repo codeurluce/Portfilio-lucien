@@ -1,10 +1,16 @@
 .skills_container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
     column-gap: 1.5rem;
     margin-bottom: 1rem;
     padding-right: 1rem;
     padding-left: 2rem;
+}
+/* Adapter la mise en page sur les petits écrans */
+@media screen and (max-width: 768px) {
+    .skills_container {
+        grid-template-columns: 1fr; /* Une seule colonne sur petits écrans */
+    }
 }
 .skill-box{
     width: 48%;
