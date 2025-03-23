@@ -4,7 +4,6 @@
     column-gap: 1.5rem;
     margin-bottom: 1rem;
     padding-right: 1rem;
-    padding-left: 2rem;
 }
 /* Adapter la mise en page sur les petits écrans */
 @media screen and (max-width: 768px) {
@@ -13,7 +12,7 @@
     }
 }
 .skill-box{
-    width: 48%;
+    width: 50%;
     margin:15px 0;
 }
 .skill-box .title{

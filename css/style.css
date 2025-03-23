@@ -47,8 +47,9 @@
 }
 
 html {
-    scroll-behavior: smooth;
-    /*La propriété définit le comportement du défilement */
+    scroll-behavior: smooth;    /*La propriété définit le comportement du défilement */
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body,
@@ -431,11 +432,7 @@ body.menu-open::before {
     max-width: min(90%, 1100px);
     /* Adapte la largeur sans dépasser 1000px */
     margin: auto;
-    padding-inline: 0.9rem 0rem;
-}
-
-.grid {
-    display: grid;
+    padding-inline: 0.9rem;
 }
 
 .section {
@@ -443,7 +440,15 @@ body.menu-open::before {
     padding-bottom: 0rem;
     justify-content: center;
     position: relative;
-    /* border: 1px solid red; */
+    /* border: 1px solid red;   */
+}
+/* .main{
+    border: 1px solid blue; 
+} */
+
+
+.grid {
+    display: grid;
 }
 
 .section_title {
@@ -456,8 +461,7 @@ body.menu-open::before {
 
 @media screen and (max-width: 768px) {
     .section_title {
-        font-size: calc(var(--fs-h2) * 0.8);
-        /* Réduit la taille de 20% */
+        font-size: calc(var(--fs-h2) * 0.8); /* Réduit la taille de 20% */
         text-align: center;
     }
 }

@@ -64,17 +64,6 @@ footer li {
 }
 
 @media (max-width: 910px) {
-    .button {
-        border: 1px solid var(--primary-blue);
-        padding: 9px;
-        border-radius: 25px;
-        cursor: pointer;
-        background-color: white;
-        outline: none;
-        width: 30%;
-        position: absolute;
-    }
-
     footer li {
         list-style: none;
         display: inline-block;

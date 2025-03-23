@@ -131,7 +131,6 @@
     color: white;
     border: solid 2px;
 }
-
 .button {
     border: 1px solid var(--primary-blue);
     padding: 9px;
@@ -139,19 +138,8 @@
     cursor: pointer;
     background-color: white;
     outline: none;
-    width: 12%;
+    width: 20%;
+    min-width: 120px; /* Empêche le bouton de devenir trop petit */
+    max-width: 200px; /* Empêche le bouton de devenir trop grand */
     position: absolute;
-}
-
-@media (max-width: 817px) {
-    .button {
-        border: 1px solid var(--primary-blue);
-        padding: 9px;
-        border-radius: 25px;
-        cursor: pointer;
-        background-color: white;
-        outline: none;
-        width: 25%;
-        position: absolute;
-    }
 }
