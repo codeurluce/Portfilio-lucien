@@ -34,7 +34,11 @@
     height: 100%;
     width: 90%;
     border-radius: 10px;
-    background: #00b7ff;
+    background: #4DA1D2; 
+    /* background: #00b7ff; bleu*/
+    /* background: #00B8D4; cyan*/
+
+
     animation: progress 1s ease-in-out forwards;
     opacity: 0;
 }
@@ -56,7 +60,7 @@
     color: #fff;
     padding: 2px 6px;
     border-radius: 3px;
-    background: #00b7ff;
+    background: #4DA1D2;
 }
 .tooltip::before{
     content: '';
@@ -66,32 +70,6 @@
     height: 10px;
     width: 10px;
     z-index: -1;
-    background-color: #00b7ff;
+    background-color: #4DA1D2;
     transform: translateX(-50%) rotate(45deg);
 }
-.skill-per.javaScript{
-    width: 85%;
-    }.skill-per.React{
-        width: 5%;
-        }.skill-per.Angular{
-            width: 5%;
-            }.skill-per.Vue{
-                width: 5%;
-                }.skill-per.Next{
-                    width: 5%;
-                    }
-.skill-per.PHP{
-width: 90%;
-}.skill-per.nodejs{
-    width: 60%;
-    }.skill-per.python{
-        width: 75%;
-        }.skill-per.MySql{
-            width: 5%;
-            }.skill-per.MongooDB{
-                width: 5%;
-                }.skill-per.Laravel{
-                    width: 5%;
-                    }.skill-per.Django{
-                        width: 5%;
-                        }
