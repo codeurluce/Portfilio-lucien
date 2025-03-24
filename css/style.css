@@ -334,27 +334,15 @@ body.menu-open::before {
 }
 
 .circle-image {
-    float: right;
-    /* Positionne l'image à droite */
-    margin: 0 0 10px 10px;
-    /* Ajoute un espacement autour de l'image */
-    border-radius: 50%;
-    /* Rend l'image ronde */
-    width: 300px;
-    /* Ajustez la taille de l'image */
-    height: 300px;
-    /* Ajustez la hauteur pour garder le cercle */
-    object-fit: cover;
-    /* Garde les proportions de l'image */
-    shape-outside: circle();
-    /* Crée une forme circulaire autour de l'image */
-    clip-path: circle();
-    /* Rend le conteneur réellement rond pour correspondre */
-    margin: 15px 15px 15px 50px;
-    /* Ajoute un espace entre l'image et le texte */
+    float: right;    /* Positionne l'image à droite */
+    border-radius: 50%;    /* Rend l'image ronde */
+    width: 300px;    /* Ajustez la taille de l'image */
+    height: 300px;    /* Ajustez la hauteur pour garder le cercle */
+    object-fit: cover;    /* Garde les proportions de l'image */
+    shape-outside: circle();    /* Crée une forme circulaire autour de l'image */
+    clip-path: circle();    /* Rend le conteneur réellement rond pour correspondre */
+    margin: 15px 15px 15px 15px;    /* Ajoute un espace entre l'image et le texte */
 }
-
-
 /* S'assurer que l'élément ne se déplace pas hors de la vue */
 [data-aos="fade-left"] {
     position: relative;
