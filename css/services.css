@@ -9,8 +9,25 @@
     margin-top: 3rem;
     justify-content: center;
 }
+.card {
+    width: 320px; /* Conserve la largeur définie */
+    /*min-height: 190px;  Hauteur minimum */
+    height: auto; /* Permet d'agrandir le box si le texte est trop long */
+    background-color: #fff;
+    padding: 2% 4%;
+    border: 0.5px solid #03678e;
+    border-radius: 10px;
+    transition: 0.6s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    opacity: 0; 
+    will-change: transform, opacity;
+}
 
-.card{
+/* .card{
     height: 210px;
     width: 320px;
     background-color: #fff;
@@ -25,7 +42,7 @@
     overflow: hidden;
     opacity: 0; 
     will-change: transform, opacity;
-}
+} */
 /* Appliquer l'animation quand la classe `visible` est ajoutée */
 .card.visible {
     animation: fadeInLeft 0.6s ease-out forwards;
@@ -64,6 +81,7 @@
     width: 100%;
     margin: 12px 0;
     color: black;
+    overflow: hidden;
 }
 
 .card:after{
@@ -93,8 +111,7 @@
     }
     .card{
         width: 260px;
-        height: 250px;
-        padding: 2% 5%;
+        height: auto;
 
     }    
     
@@ -121,7 +138,7 @@
     @media screen and (max-width:360px) {
               .card{
                 width: 250px;
-                height: 260px;
+                height: auto;
               }
 }
 @media screen and (max-width:280px) {
