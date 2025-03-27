@@ -39,7 +39,7 @@
     /* background: #00B8D4; cyan*/
 
 
-    animation: progress 1s ease-in-out forwards;
+    animation: progress 2s ease-in-out forwards;
     opacity: 0;
 }
 @keyframes progress {
