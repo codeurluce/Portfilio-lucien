@@ -67,11 +67,19 @@ main.row{
 }
 
 .resume_description{
-    text-align: start;
     text-align: justify;
     width: 100%;
     margin: 12px 0;
     color: black;
+}
+
+@media screen and (max-width: 768px) {
+    .resume_description{
+        text-align: justify;
+        width: 100%;
+        margin: 12px 0;
+        color: black;
+    }
 }
 .box:hover{
     background-color: transparent;

@@ -342,6 +342,15 @@ body.menu-open::before {
     object-fit: cover;
     border: 5px solid #3498db;
 }
+
+@media (max-width: 768px) {
+    .circle-image {
+        float: none; /* Enlève le flottement */
+        display: block; /* Permet de centrer */
+        margin: 20px auto; /* Centre horizontalement */
+    }
+}
+
 /* S'assurer que l'élément ne se déplace pas hors de la vue */
 [data-aos="fade-left"] {
     position: relative;
