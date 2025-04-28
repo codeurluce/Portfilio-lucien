@@ -68,6 +68,7 @@ main.row{
 
 .resume_description{
     text-align: start;
+    text-align: justify;
     width: 100%;
     margin: 12px 0;
     color: black;

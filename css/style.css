@@ -338,8 +338,8 @@ body.menu-open::before {
     border-radius: 30px;
     width: 300px;
     height: 380px;
+    margin: 15px;
     object-fit: cover;
-    margin: 15px; 
     border: 5px solid #3498db;
 }
 /* S'assurer que l'élément ne se déplace pas hors de la vue */
