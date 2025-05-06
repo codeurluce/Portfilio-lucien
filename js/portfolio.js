@@ -13,7 +13,7 @@ const portfolioData = [
         title: "AzerType",
         category: "Web Application",
         description: "une application web interactive qui aide les utilisateurs à améliorer leur vitesse de frappe au clavier. Développée en HTML, CSS et JavaScript.",
-        image: "img/portfolio_img/azerType.png",
+        image: "img/portfolio_img/Robbie-lens_Portfolio.png",
         link: "https://github.com/codeurluce/AzerType_Js/blob/main/README.md"
     },
     {
