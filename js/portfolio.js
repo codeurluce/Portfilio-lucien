@@ -9,14 +9,6 @@ const portfolioData = [
         link: "https://github.com/codeurluce/Robbie-Lens_Portfolio/blob/main/README.md"
     },
     {
-        id: 2,
-        title: "AzerType",
-        category: "Web Application",
-        description: "une application web interactive qui aide les utilisateurs à améliorer leur vitesse de frappe au clavier. Développée en HTML, CSS et JavaScript.",
-        image: "img/portfolio_img/Robbie-lens_Portfolio.png",
-        link: "https://github.com/codeurluce/AzerType_Js/blob/main/README.md"
-    },
-    {
         id: 3,
         title: "Les Bonnes Pièces",
         category: "Web Application",
@@ -88,6 +80,14 @@ const portfolioData = [
         description: "Cette application, développée avec React, permet d’incrémenter ou de décrémenter un compteur, ainsi que d’effectuer une recherche via une barre de recherche stylisée.",
         image: "img/portfolio_img/count&search.png",
         link: "https://github.com/codeurluce/compteur-rechercheApp_React/blob/main/README.md"
+    },
+    {
+        id: 2,
+        title: "AzerType",
+        category: "Web Application",
+        description: "une application web interactive qui aide les utilisateurs à améliorer leur vitesse de frappe au clavier. Développée en HTML, CSS et JavaScript.",
+        image: "img/portfolio_img/Robbie-lens_Portfolio.png",
+        link: "https://github.com/codeurluce/AzerType_Js/blob/main/README.md"
     },
 ];
 
