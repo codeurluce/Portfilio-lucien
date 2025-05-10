@@ -80,9 +80,16 @@ const portfolioData = [
         description: "La maison jungle est une mini-application de e-commerce développée avec React . Elle permet d'afficher une sélection de plantes, de filtrer selon certains critères, et de gérer un panier d'achat interactif.",
         image: "img/portfolio_img/maison_jungle1.png",
         link: "https://github.com/codeurluce/La_maison_jungle_React/blob/main/README.md"
+    }, {
+        id: 10,
+        title: "Gestion d'une Pharmacie",  
+        category: "Web Application",
+        description: "Conçue en PHP et MySQL, cette application web a pour objectif d’automatiser et de simplifier la gestion quotidienne d’une pharmacie.",
+        image: "img/portfolio_img/pharmacie.png",
+        link: "https://github.com/codeurluce/Gestion-Pharmacie/blob/main/README.md"
     },
     {
-        id: 10,
+        id: 11,
         title: "Compteur & Recherche",
         category: "Web Application",
         description: "Cette application, développée avec React, permet d’incrémenter ou de décrémenter un compteur, ainsi que d’effectuer une recherche via une barre de recherche stylisée.",
