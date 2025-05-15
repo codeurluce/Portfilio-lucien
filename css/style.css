@@ -22,7 +22,7 @@
     /* Couleur de bordure */
     --border-color: #f1f1f1;
     /* Polices */
-    --roboto-slab: 'Roboto Slab', serif;
+    --roboto-slab: 'Roboto Slab', sans-serif;
     --roboto-mono: 'Roboto Mono', monospace;
 
     /* Tailles de police */
@@ -85,7 +85,15 @@ ul {
 a {
     text-decoration: none;
 }
-
+.inter {
+    font-family: 'Inter', sans-serif;
+    text-align: justify;
+    width: 100%;
+    margin: 12px 0;
+    font-size: 1rem;          /* Taille de police (modifiable) */
+    color: #2c2c2c;             /* Couleur du texte (gris foncé) */
+    line-height: 1.5;   
+  }
 p {
     text-align: justify;
 }
