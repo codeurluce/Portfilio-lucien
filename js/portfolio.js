@@ -96,6 +96,14 @@ const portfolioData = [
         image: "img/portfolio_img/count&search.png",
         link: "https://github.com/codeurluce/compteur-rechercheApp_React/blob/main/README.md"
     },
+    {
+        id: 12,
+        title: "Gourmet Burger",
+        category: "Wordpress Website",
+        description: "Développement d’un site vitrine et e-commerce sous WordPress, conçu avec Elementor et propulsé par WooCommerce. Offrir une expérience utilisateur fluide et professionnelle, de la découverte du menu jusqu’au paiement sécurisé.",
+        image: "img/portfolio_img/GourmetBurger.png",
+        link: "https://github.com/codeurluce/GourmetBurger/blob/main/README.md"
+    },
     
 ];
 
