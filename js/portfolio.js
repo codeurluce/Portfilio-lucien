@@ -27,36 +27,37 @@ const portfolioData = [
     },
     {
         id: 4,
-        title: "Guess the Number",
+        title: "La maison jungle",
         category: "Web Application",
-        description: "Un jeu web interactif en JavaScript où les utilisateurs doivent deviner un nombre aléatoire généré par l'ordinateur.",
-        image: "img/portfolio_img/GuessNumber.png",
-        link: "https://github.com/codeurluce/GuessNumber/blob/main/README.md"
+        description: "La maison jungle est une mini-application de e-commerce développée avec React . Elle permet d'afficher une sélection de plantes, de filtrer selon certains critères, et de gérer un panier d'achat interactif.",
+        image: "img/portfolio_img/maison_jungle1.png",
+        link: "https://github.com/codeurluce/La_maison_jungle_React/blob/main/README.md"
     },
     {
         id: 5,
-        title: "Horloge Dynamique",
-        category: "Web Development",
-        description: "Une horloge dynamique en temps réel, affichant l'heure actuelle de differentes villes, avec une mise à jour automatique, réalisée en JavaScript.",
-        image: "img/portfolio_img/horloge.png",
-        link: "https://github.com/codeurluce/Horloge/blob/main/README.md"
+        title: "Snapface",
+        category: "Web Application",
+        description: "une application web développée avec Angular. Il s'agit d’un projet de type réseau social simplifié, qui permet de consulter et d’interagir avec des photos partagées par les utilisateurs.",
+        image: "img/portfolio_img/snapface.png",
+        link: "https://github.com/codeurluce/AngularProjet/blob/main/README.md"
     },
     {
         id: 6,
-        title: "Notes App",
-        category: "Web Application",
-        description: "Une application de prise de notes simple et efficace, permettant aux utilisateurs de créer, modifier et supprimer des notes, développée avec Node.js, Express, EJS et MySQL",
-        image: "img/portfolio_img/noteApp.png",
-        link: "https://github.com/codeurluce/NotesApps/blob/master/README.md"
-    },
-    {
-        id: 7,
         title: "site E-commerce",
         category: "Web Application",
         description: "Une API pour un magasin en ligne simple, développée avec Node.js, Express.js et MongoDB. Elle permet la gestion des produits, l’authentification des utilisateurs via JWT, ainsi que le téléchargement d’images grâce à Multer.",
         image: "img/portfolio_img/E-com1.png",
         link: "https://github.com/codeurluce/E-com_API_Nodejs/blob/main/README.md"
     },
+    {
+        id: 7,
+        title: "Notes App",
+        category: "Web Application",
+        description: "Une application de prise de notes simple et efficace, permettant aux utilisateurs de créer, modifier et supprimer des notes, développée avec Node.js, Express, EJS et MySQL",
+        image: "img/portfolio_img/noteApp.png",
+        link: "https://github.com/codeurluce/NotesApps/blob/master/README.md"
+    },
+    
     {
         id: 8,
         title: "site de Recettes",
@@ -73,14 +74,7 @@ const portfolioData = [
         image: "img/portfolio_img/student_crud.png",
         link: "https://github.com/codeurluce/Laravel_Student_CRUD/blob/main/README.md"
     },
-    {
-        id: 10,
-        title: "La maison jungle",
-        category: "Web Application",
-        description: "La maison jungle est une mini-application de e-commerce développée avec React . Elle permet d'afficher une sélection de plantes, de filtrer selon certains critères, et de gérer un panier d'achat interactif.",
-        image: "img/portfolio_img/maison_jungle1.png",
-        link: "https://github.com/codeurluce/La_maison_jungle_React/blob/main/README.md"
-    }, {
+     {
         id: 10,
         title: "Gestion d'une Pharmacie",  
         category: "Web Application",
@@ -103,6 +97,23 @@ const portfolioData = [
         description: "Développement d’un site vitrine et e-commerce sous WordPress, conçu avec Elementor et propulsé par WooCommerce. Offrir une expérience utilisateur fluide et professionnelle, de la découverte du menu jusqu’au paiement sécurisé.",
         image: "img/portfolio_img/GourmetBurger.png",
         link: "https://github.com/codeurluce/GourmetBurger/blob/main/README.md"
+    },
+    
+    {
+        id: 13,
+        title: "Guess the Number",
+        category: "Web Application",
+        description: "Un jeu web interactif en JavaScript où les utilisateurs doivent deviner un nombre aléatoire généré par l'ordinateur.",
+        image: "img/portfolio_img/GuessNumber.png",
+        link: "https://github.com/codeurluce/GuessNumber/blob/main/README.md"
+    },
+    {
+        id: 14,
+        title: "Horloge Dynamique",
+        category: "Web Development",
+        description: "Une horloge dynamique en temps réel, affichant l'heure actuelle de differentes villes, avec une mise à jour automatique, réalisée en JavaScript.",
+        image: "img/portfolio_img/horloge.png",
+        link: "https://github.com/codeurluce/Horloge/blob/main/README.md"
     },
     
 ];
